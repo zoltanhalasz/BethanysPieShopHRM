@@ -13,14 +13,14 @@
                 OnInvalidSubmit="@HandleInvalidSubmit">
 
             <DataAnnotationsValidator  />
-            <ValidationSummary></ValidationSummary>
+            <ValidationSummary class="offset-md-3 col-md-8 alert-danger text text-danger"></ValidationSummary>
 
             
             <div class="row mb-3">
                 <label for="firstName" class="col-form-label col-md-3">First name: </label>
                 <div class="col-md-8">
                     <InputText id="firstName" class="form-control col-md-8" @bind-Value="@Employee.FirstName" placeholder="Enter first name"></InputText>
-                    <ValidationMessage class="offset-md-3 col-md-8" For="@(() => Employee.FirstName)" />
+                    <ValidationMessage class="col-md-8 text text-danger" For="@(() => Employee.FirstName)" />
                 </div>
             </div>
 
@@ -28,8 +28,8 @@
                 <label for="lastName" class="col-form-label col-md-3">Last name: </label>
                 <div class="col-md-8">
                     <InputText id="lastName" class="form-control col-md-8" @bind-Value="@Employee.LastName" placeholder="Enter last name"></InputText>
-                </div>
-                <ValidationMessage class="offset-md-3 col-md-8" For="@(() => Employee.LastName)" />
+                    <ValidationMessage class="col-md-8  text text-danger" For="@(() => Employee.LastName)" />
+                </div>             
             </div>
 
 
@@ -44,7 +44,7 @@
                 <label for="email" class="col-form-label col-md-3">Email: </label>
                 <div class="col-md-8">
                     <InputText id="email" class="form-control col-md-8" @bind-Value="@Employee.Email" placeholder="Enter email"></InputText>
-                    <ValidationMessage class="offset-md-3 col-md-8" For="@(() => Employee.Email)" />
+                    <ValidationMessage class="col-md-8 text text-danger" For="@(() => Employee.Email)" />
                 </div>
             </div>
 
