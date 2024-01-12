@@ -1,0 +1,15 @@
+﻿@rendermode InteractiveServer
+
+@page "/internationalemployees"
+
+@using Microsoft.AspNetCore.Components.QuickGrid
+
+<QuickGrid Items="@itemsQueryable" Pagination="@pagination">
+    <PropertyColumn Property="@(p => p.EmployeeId)" IsDefaultSortColumn="true" Title="ID" Sortable="true">
+    </PropertyColumn>
+    <PropertyColumn Property="@(e => e.FirstName)" Title="First name" Sortable="true" />
+    <PropertyColumn Property="@(e => e.LastName)" Title="Last name" Sortable="true" />
+    <PropertyColumn Property="@(e => e.Email)" Title="Email" Align="Align.Right" />
+</QuickGrid>
+
+<Paginator State="@pagination" />
